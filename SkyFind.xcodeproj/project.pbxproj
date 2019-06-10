@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD9E6A1A22AE68B200C3D355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A1922AE68B200C3D355 /* AppDelegate.swift */; };
+		FD9E6A1C22AE68B200C3D355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A1B22AE68B200C3D355 /* ViewController.swift */; };
+		FD9E6A1F22AE68B200C3D355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9E6A1D22AE68B200C3D355 /* Main.storyboard */; };
+		FD9E6A2222AE68B200C3D355 /* SkyFind.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A2022AE68B200C3D355 /* SkyFind.xcdatamodeld */; };
+		FD9E6A2422AE68B300C3D355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9E6A2322AE68B300C3D355 /* Assets.xcassets */; };
+		FD9E6A2722AE68B300C3D355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9E6A2522AE68B300C3D355 /* LaunchScreen.storyboard */; };
+		FD9E6A3022AE690B00C3D355 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A2F22AE690B00C3D355 /* EndPointType.swift */; };
+		FD9E6A3222AE691D00C3D355 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A3122AE691D00C3D355 /* HTTPMethod.swift */; };
+		FD9E6A3422AE693100C3D355 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A3322AE693100C3D355 /* HTTPTask.swift */; };
+		FD9E6A3622AE693B00C3D355 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A3522AE693B00C3D355 /* Router.swift */; };
+		FD9E6A3822AE694600C3D355 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A3722AE694600C3D355 /* NetworkManager.swift */; };
+		FD9E6A3A22AE695000C3D355 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A3922AE695000C3D355 /* API.swift */; };
+		FD9E6A3E22AE698600C3D355 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A3D22AE698600C3D355 /* URLParameterEncoder.swift */; };
+		FD9E6A4022AE69A200C3D355 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A3F22AE69A200C3D355 /* JSONParameterEncoder.swift */; };
+		FD9E6A4222AE701700C3D355 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A4122AE701700C3D355 /* NetworkRouter.swift */; };
+		FD9E6A4522AE900200C3D355 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A4422AE900200C3D355 /* TokenModel.swift */; };
+		FD9E6A4722AE90A800C3D355 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A4622AE90A800C3D355 /* FlightModel.swift */; };
+		FD9E6A4922AE90BB00C3D355 /* AirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A4822AE90BB00C3D355 /* AirportModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD9E6A1622AE68B200C3D355 /* SkyFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9E6A1922AE68B200C3D355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD9E6A1B22AE68B200C3D355 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD9E6A1E22AE68B200C3D355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD9E6A2122AE68B200C3D355 /* SkyFind.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkyFind.xcdatamodel; sourceTree = "<group>"; };
+		FD9E6A2322AE68B300C3D355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD9E6A2622AE68B300C3D355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD9E6A2822AE68B300C3D355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD9E6A2F22AE690B00C3D355 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		FD9E6A3122AE691D00C3D355 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FD9E6A3322AE693100C3D355 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		FD9E6A3522AE693B00C3D355 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FD9E6A3722AE694600C3D355 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FD9E6A3922AE695000C3D355 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FD9E6A3D22AE698600C3D355 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		FD9E6A3F22AE69A200C3D355 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		FD9E6A4122AE701700C3D355 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		FD9E6A4422AE900200C3D355 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		FD9E6A4622AE90A800C3D355 /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
+		FD9E6A4822AE90BB00C3D355 /* AirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD9E6A1322AE68B200C3D355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD9E6A0D22AE68B200C3D355 = {
+			isa = PBXGroup;
+			children = (
+				FD9E6A1822AE68B200C3D355 /* SkyFind */,
+				FD9E6A1722AE68B200C3D355 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD9E6A1722AE68B200C3D355 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD9E6A1622AE68B200C3D355 /* SkyFind.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD9E6A1822AE68B200C3D355 /* SkyFind */ = {
+			isa = PBXGroup;
+			children = (
+				FD9E6A2E22AE68E900C3D355 /* Networking */,
+				FD9E6A1922AE68B200C3D355 /* AppDelegate.swift */,
+				FD9E6A1B22AE68B200C3D355 /* ViewController.swift */,
+				FD9E6A1D22AE68B200C3D355 /* Main.storyboard */,
+				FD9E6A2322AE68B300C3D355 /* Assets.xcassets */,
+				FD9E6A2522AE68B300C3D355 /* LaunchScreen.storyboard */,
+				FD9E6A2822AE68B300C3D355 /* Info.plist */,
+				FD9E6A2022AE68B200C3D355 /* SkyFind.xcdatamodeld */,
+			);
+			path = SkyFind;
+			sourceTree = "<group>";
+		};
+		FD9E6A2E22AE68E900C3D355 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FD9E6A4322AE8FF300C3D355 /* Models */,
+				FD9E6A2F22AE690B00C3D355 /* EndPointType.swift */,
+				FD9E6A3122AE691D00C3D355 /* HTTPMethod.swift */,
+				FD9E6A3322AE693100C3D355 /* HTTPTask.swift */,
+				FD9E6A3522AE693B00C3D355 /* Router.swift */,
+				FD9E6A3722AE694600C3D355 /* NetworkManager.swift */,
+				FD9E6A3922AE695000C3D355 /* API.swift */,
+				FD9E6A3D22AE698600C3D355 /* URLParameterEncoder.swift */,
+				FD9E6A3F22AE69A200C3D355 /* JSONParameterEncoder.swift */,
+				FD9E6A4122AE701700C3D355 /* NetworkRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FD9E6A4322AE8FF300C3D355 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD9E6A4822AE90BB00C3D355 /* AirportModel.swift */,
+				FD9E6A4622AE90A800C3D355 /* FlightModel.swift */,
+				FD9E6A4422AE900200C3D355 /* TokenModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD9E6A1522AE68B200C3D355 /* SkyFind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD9E6A2B22AE68B300C3D355 /* Build configuration list for PBXNativeTarget "SkyFind" */;
+			buildPhases = (
+				FD9E6A1222AE68B200C3D355 /* Sources */,
+				FD9E6A1322AE68B200C3D355 /* Frameworks */,
+				FD9E6A1422AE68B200C3D355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyFind;
+			productName = SkyFind;
+			productReference = FD9E6A1622AE68B200C3D355 /* SkyFind.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD9E6A0E22AE68B200C3D355 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Angie Mugo";
+				TargetAttributes = {
+					FD9E6A1522AE68B200C3D355 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FD9E6A1122AE68B200C3D355 /* Build configuration list for PBXProject "SkyFind" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD9E6A0D22AE68B200C3D355;
+			productRefGroup = FD9E6A1722AE68B200C3D355 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD9E6A1522AE68B200C3D355 /* SkyFind */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD9E6A1422AE68B200C3D355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9E6A2722AE68B300C3D355 /* LaunchScreen.storyboard in Resources */,
+				FD9E6A2422AE68B300C3D355 /* Assets.xcassets in Resources */,
+				FD9E6A1F22AE68B200C3D355 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD9E6A1222AE68B200C3D355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9E6A3422AE693100C3D355 /* HTTPTask.swift in Sources */,
+				FD9E6A3022AE690B00C3D355 /* EndPointType.swift in Sources */,
+				FD9E6A1C22AE68B200C3D355 /* ViewController.swift in Sources */,
+				FD9E6A3622AE693B00C3D355 /* Router.swift in Sources */,
+				FD9E6A4022AE69A200C3D355 /* JSONParameterEncoder.swift in Sources */,
+				FD9E6A4222AE701700C3D355 /* NetworkRouter.swift in Sources */,
+				FD9E6A3822AE694600C3D355 /* NetworkManager.swift in Sources */,
+				FD9E6A1A22AE68B200C3D355 /* AppDelegate.swift in Sources */,
+				FD9E6A3222AE691D00C3D355 /* HTTPMethod.swift in Sources */,
+				FD9E6A3A22AE695000C3D355 /* API.swift in Sources */,
+				FD9E6A2222AE68B200C3D355 /* SkyFind.xcdatamodeld in Sources */,
+				FD9E6A3E22AE698600C3D355 /* URLParameterEncoder.swift in Sources */,
+				FD9E6A4922AE90BB00C3D355 /* AirportModel.swift in Sources */,
+				FD9E6A4522AE900200C3D355 /* TokenModel.swift in Sources */,
+				FD9E6A4722AE90A800C3D355 /* FlightModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD9E6A1D22AE68B200C3D355 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD9E6A1E22AE68B200C3D355 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD9E6A2522AE68B300C3D355 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD9E6A2622AE68B300C3D355 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD9E6A2922AE68B300C3D355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD9E6A2A22AE68B300C3D355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD9E6A2C22AE68B300C3D355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SkyFind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nnn.SkyFind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD9E6A2D22AE68B300C3D355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SkyFind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nnn.SkyFind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD9E6A1122AE68B200C3D355 /* Build configuration list for PBXProject "SkyFind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD9E6A2922AE68B300C3D355 /* Debug */,
+				FD9E6A2A22AE68B300C3D355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD9E6A2B22AE68B300C3D355 /* Build configuration list for PBXNativeTarget "SkyFind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD9E6A2C22AE68B300C3D355 /* Debug */,
+				FD9E6A2D22AE68B300C3D355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD9E6A2022AE68B200C3D355 /* SkyFind.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD9E6A2122AE68B200C3D355 /* SkyFind.xcdatamodel */,
+			);
+			currentVersion = FD9E6A2122AE68B200C3D355 /* SkyFind.xcdatamodel */;
+			path = SkyFind.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FD9E6A0E22AE68B200C3D355 /* Project object */;
+}
