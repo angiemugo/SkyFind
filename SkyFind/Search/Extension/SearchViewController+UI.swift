@@ -5,6 +5,7 @@
 //  Created by Angie Mugo on 10/06/2019.
 //  Copyright © 2019 Angie Mugo. All rights reserved.
 //
+import UIKit
 
 extension SearchViewController {
     func setupUI() {
@@ -46,8 +47,11 @@ extension SearchViewController {
         searchButton.topAnchor.constraint(equalTo: dateTextField.bottomAnchor, constant: 32).isActive = true
     }
 
-//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-//        //
-//    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let view = AirportListViewController()
+        view.delegate = self
+        self.navigationController?.pushViewController(view, animated: true)
+        return false
+    }
 
 }
