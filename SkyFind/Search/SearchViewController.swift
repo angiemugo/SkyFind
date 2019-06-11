@@ -32,16 +32,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         textField.attributedPlaceholder = NSAttributedString(string: "Select the airport to depart from",
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         let rightImage = UIImageView(frame: CGRect(x: 10, y: 10, width: 32, height: 32))
-        rightImage.image = #imageLiteral(resourceName: "downArrow")
+        rightImage.image = #imageLiteral(resourceName: "rightArrow")
         textField.translatesAutoresizingMaskIntoConstraints = false
         let view = UIView(frame: CGRect(x: 10, y: 10, width: 48, height: 48))
         view.addSubview(rightImage)
         textField.rightView = view
         textField.rightViewMode = .always
-
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = UIDatePicker.Mode.date
-        textField.inputView = datePicker
         return textField
     }()
 
@@ -69,8 +65,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         textField.translatesAutoresizingMaskIntoConstraints = false
 
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        textField.inputView = datePicker
+
         let rightImage = UIImageView(frame: CGRect(x: 10, y: 10, width: 32, height: 32))
-        rightImage.image = #imageLiteral(resourceName: "rightArrow")
+        rightImage.image = #imageLiteral(resourceName: "downArrow")
         textField.translatesAutoresizingMaskIntoConstraints = false
         let view = UIView(frame: CGRect(x: 10, y: 10, width: 48, height: 48))
         view.addSubview(rightImage)
