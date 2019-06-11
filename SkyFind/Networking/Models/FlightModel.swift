@@ -24,7 +24,7 @@ extension ScheduleResource: Decodable {
     }
 
     init(from data: Data) throws {
-        self = JSONDecoder().decode(ScheduleResource.self, from: data)
+        self = try JSONDecoder().decode(ScheduleResource.self, from: data)
     }
 }
 
