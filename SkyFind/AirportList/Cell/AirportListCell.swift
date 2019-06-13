@@ -12,22 +12,24 @@ class AirportListCell: UITableViewCell {
 
     let airportCodeLabel: UILabel = {
         let label = UILabel()
-        label.text = "IAD"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     let airportNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Los Angeles"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
+    var airport: Airport? {
+        didSet {
+            setupCell()
+        }
+    }
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        setupCell()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -39,6 +41,9 @@ class AirportListCell: UITableViewCell {
         self.addSubview(airportNameLabel)
         self.selectionStyle = .none
 
+        guard let airport = airport else { return }
+        airportNameLabel.text = airport.location
+        airportCodeLabel.text = "\(airport.airportCode), \(airport.name.name[0].airportName)"
         airportCodeLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         airportCodeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         airportCodeLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true

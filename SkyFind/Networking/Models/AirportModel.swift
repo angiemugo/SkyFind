@@ -102,8 +102,8 @@ extension Position: Decodable {
 }
 
 struct Coordinate {
-    var longitude: Int
-    var latitude: Int
+    var longitude: Double
+    var latitude: Double
 }
 
 extension Coordinate: Decodable {
@@ -115,13 +115,13 @@ extension Coordinate: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        longitude = try container.decode(Int.self, forKey: .Longitude)
-        latitude = try container.decode(Int.self, forKey: .Latitude)
+        longitude = try container.decode(Double.self, forKey: .Longitude)
+        latitude = try container.decode(Double.self, forKey: .Latitude)
     }
 }
 
 struct Names {
-    var name: Name
+    var name: [Name]
 }
 
 extension Names: Decodable {
@@ -132,7 +132,7 @@ extension Names: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        name = try container.decode(Name.self, forKey: .Name)
+        name = try container.decode([Name].self, forKey: .Name)
     }
 }
 
