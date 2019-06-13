@@ -9,7 +9,7 @@
 import Foundation
 
 enum API {
-    case GetAirports
+    case GetAirports(token: String)
     case GetToken(clientID: String, clientSecret: String)
     case GetFlightSchedule(origin: String, destination: String, date: String, directFlights: Bool?)
 }
@@ -52,8 +52,8 @@ extension API: EndPointType {
 
     var task: HTTPTask {
         switch self {
-        case .GetAirports:
-            return .Request
+        case .GetAirports(let token):
+            return .RequestParametersAndHeaders(bodyParameters: nil, urlParameters: nil, additionalHeaders: ["Authorization": "Bearer \(token)", "Accept": "application/json", "lang": "en"])
 
         case .GetToken(let clientId, let secret):
             return .RequestFormEncoded(bodyParameters: ["client_id": clientId, "client_secret": secret, "grant_type": "client_credentials"])

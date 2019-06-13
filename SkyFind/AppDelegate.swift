@@ -103,7 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
 
             if let response = response {
-                KeychainWrapper.standard.set(response.access_token, forKey: "TokenModel")
+                KeychainWrapper.standard.set(response.access_token, forKey: "token")
                 KeychainWrapper.standard.set("\(response.validity_period)", forKey: "ValidityTime")
             }
         }

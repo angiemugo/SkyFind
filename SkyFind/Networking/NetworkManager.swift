@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftKeychainWrapper
 
 struct NetworkManager {
     private let router = Router<API>()
@@ -66,7 +67,12 @@ struct NetworkManager {
     }
 
     func getAirports(completion: @escaping (_ response: [Airport]?, _ error: String?) -> ()) {
-        router.request(.GetAirports) { data, response, error in
+        guard let token = KeychainWrapper.standard.string(forKey: "token") else {
+            return
+            //implement logic to kick off fetching the token
+        }
+
+        router.request(.GetAirports(token: token)) { data, response, error in
             if error != nil {
                 completion(nil, "Please check your network connection")
             }

@@ -34,7 +34,8 @@ extension AirportListViewController {
     }
 
     @objc func back() {
-        delegate?.getAirport("IAD")
+        guard let airport = selectedAirport else { return }
+        delegate?.getAirport(airport)
         self.navigationController?.popViewController(animated: true)
     }
 }

@@ -14,8 +14,7 @@ protocol AiportListViewDelegate {
     func getAirport(_ airport: String)
 }
 
-class AirportListViewController: UIViewController {
-
+class AirportListViewController: UIViewController, UISearchResultsUpdating {
     let mainView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -29,10 +28,13 @@ class AirportListViewController: UIViewController {
         return view
     }()
 
+    var searchController = UISearchController()
     var delegate: AiportListViewDelegate?
     let refreshControl = UIRefreshControl()
     var selectedCell: Int?
+    var selectedAirport: String?
     var airports = [Airport]()
+    var filteredAirports = [Airport]()
     var viewModel: AirportListViewModel? {
         didSet {
             setupViewModel()
@@ -48,6 +50,16 @@ class AirportListViewController: UIViewController {
         super.viewDidLoad()
 
         self.setupUI()
+        searchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+
+            mainTableview.tableHeaderView = controller.searchBar
+
+            return controller
+        })()
         self.navigationItem.title = "Airports"
         mainTableview.register(AirportListCell.self, forCellReuseIdentifier: Constants.AIRPORT_CELL)
         mainTableview.tableFooterView = UIView()
@@ -56,4 +68,19 @@ class AirportListViewController: UIViewController {
                                          refreshControl: refreshControl.rx.controlEvent(.valueChanged).asDriver())
     }
 
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+
+    func filterContentForSearchText(_ searchText: String) {
+        filteredAirports = airports.filter({(airport: Airport) -> Bool in
+            return airport.airportCode.lowercased().contains(searchText.lowercased())
+        })
+
+        mainTableview.reloadData()
+    }
+
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
 }
