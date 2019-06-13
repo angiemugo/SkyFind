@@ -11,7 +11,7 @@ import Foundation
 struct TokenModel {
     var access_token: String
     var token_type: String
-    var validity_period: String
+    var validity_period: Int
 }
 
 extension TokenModel: Decodable {
@@ -26,7 +26,7 @@ extension TokenModel: Decodable {
 
         access_token = try container.decode(String.self, forKey: .AccessToken)
         token_type = try container.decode(String.self, forKey: .TokenType)
-        validity_period = try container.decode(String.self, forKey: .ValidityPeriod)
+        validity_period = try container.decode(Int.self, forKey: .ValidityPeriod)
     }
 
     init(from data: Data) throws {

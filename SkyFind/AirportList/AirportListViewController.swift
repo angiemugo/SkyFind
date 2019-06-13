@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 protocol AiportListViewDelegate {
     func getAirport(_ airport: String)
@@ -28,7 +30,15 @@ class AirportListViewController: UIViewController {
     }()
 
     var delegate: AiportListViewDelegate?
+    let refreshControl = UIRefreshControl()
     var selectedCell: Int?
+    var airports = [Airport]()
+    var viewModel: AirportListViewModel? {
+        didSet {
+            setupViewModel()
+        }
+    }
+    let disposeBag = DisposeBag()
 
     struct Constants {
         static var AIRPORT_CELL = "airports"
@@ -37,10 +47,13 @@ class AirportListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupUI()
         self.navigationItem.title = "Airports"
         mainTableview.register(AirportListCell.self, forCellReuseIdentifier: Constants.AIRPORT_CELL)
         mainTableview.tableFooterView = UIView()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "leftArrow"), style: .plain, target: self, action: #selector(back))
-        self.setupUI()
+        viewModel = AirportListViewModel(with: NetworkManager(),
+                                         refreshControl: refreshControl.rx.controlEvent(.valueChanged).asDriver())
     }
+
 }

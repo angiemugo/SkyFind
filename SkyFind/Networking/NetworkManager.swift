@@ -65,7 +65,7 @@ struct NetworkManager {
         }
     }
 
-    func getAirports(completion: @escaping (_ response: AirportResponse?, _ error: String?) -> ()) {
+    func getAirports(completion: @escaping (_ response: [Airport]?, _ error: String?) -> ()) {
         router.request(.GetAirports) { data, response, error in
             if error != nil {
                 completion(nil, "Please check your network connection")
@@ -82,7 +82,7 @@ struct NetworkManager {
 
                     do {
                         let apiResponse = try AirportResponse(from: responseData)
-                        completion(apiResponse, nil)
+                        completion(apiResponse.airportResource.airports.airport, nil)
                     } catch let error {
                         completion(nil, error.localizedDescription)
                     }

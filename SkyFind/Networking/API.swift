@@ -56,7 +56,7 @@ extension API: EndPointType {
             return .Request
 
         case .GetToken(let clientId, let secret):
-            return .RequestParametersAndHeaders(bodyParameters: ["client_id": clientId, "client_secret": secret, "grant_type": "client_credentials"], urlParameters: nil, additionalHeaders: ["Accept": "application/json"])
+            return .RequestFormEncoded(bodyParameters: ["client_id": clientId, "client_secret": secret, "grant_type": "client_credentials"])
 
         case .GetFlightSchedule(let origin, let destination, let date, let directFlights):
             return .RequestParametersAndHeaders(bodyParameters: ["origin": origin, "destination": destination, "fromDateTime": date, "directFlights": directFlights ?? false], urlParameters: nil, additionalHeaders: nil)

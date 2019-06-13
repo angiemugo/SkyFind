@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D15425307488AB542CF72C71 /* Pods_SkyFind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94286BC569CAAB4A836E0100 /* Pods_SkyFind.framework */; };
 		FD6966A022AF9A7400D4C2B4 /* AirportListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69669F22AF9A7400D4C2B4 /* AirportListViewModel.swift */; };
 		FD6966A422AF9AA400D4C2B4 /* AirportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966A322AF9AA400D4C2B4 /* AirportListViewController.swift */; };
 		FD6966A722AF9AC400D4C2B4 /* AirportListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966A622AF9AC400D4C2B4 /* AirportListCell.swift */; };
@@ -33,9 +34,14 @@
 		FD9E6A5522AEC80B00C3D355 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A5422AEC80B00C3D355 /* UITextField+Extension.swift */; };
 		FD9E6A5722AEC85600C3D355 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A5622AEC85600C3D355 /* UIColor+Extension.swift */; };
 		FD9E6A5922AECAFE00C3D355 /* SearchViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A5822AECAFE00C3D355 /* SearchViewController+UI.swift */; };
+		FDC2C66C22B0D72000640A97 /* AirportViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2C66B22B0D72000640A97 /* AirportViewModel+Extension.swift */; };
+		FDC2C66E22B0DA3F00640A97 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2C66D22B0DA3F00640A97 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FC91D971D7666C479BB2304 /* Pods-SkyFind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind.debug.xcconfig"; sourceTree = "<group>"; };
+		94286BC569CAAB4A836E0100 /* Pods_SkyFind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyFind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE74C69B8F6BBF843282DC42 /* Pods-SkyFind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFind.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind.release.xcconfig"; sourceTree = "<group>"; };
 		FD69669F22AF9A7400D4C2B4 /* AirportListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewModel.swift; sourceTree = "<group>"; };
 		FD6966A322AF9AA400D4C2B4 /* AirportListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewController.swift; sourceTree = "<group>"; };
 		FD6966A622AF9AC400D4C2B4 /* AirportListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListCell.swift; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 		FD9E6A5422AEC80B00C3D355 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		FD9E6A5622AEC85600C3D355 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FD9E6A5822AECAFE00C3D355 /* SearchViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UI.swift"; sourceTree = "<group>"; };
+		FDC2C66B22B0D72000640A97 /* AirportViewModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirportViewModel+Extension.swift"; sourceTree = "<group>"; };
+		FDC2C66D22B0DA3F00640A97 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +79,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D15425307488AB542CF72C71 /* Pods_SkyFind.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E94083E758E21CB01EEC0B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FC91D971D7666C479BB2304 /* Pods-SkyFind.debug.xcconfig */,
+				AE74C69B8F6BBF843282DC42 /* Pods-SkyFind.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		663784F08C8F76639E13BBA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94286BC569CAAB4A836E0100 /* Pods_SkyFind.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD6966A122AF9A7800D4C2B4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +116,7 @@
 			children = (
 				FD6966A822AF9DEE00D4C2B4 /* AirportListView+UI.swift */,
 				FD6966AA22AF9E5400D4C2B4 /* AirportListView+Delegate.swift */,
+				FDC2C66B22B0D72000640A97 /* AirportViewModel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -107,6 +134,8 @@
 			children = (
 				FD9E6A1822AE68B200C3D355 /* SkyFind */,
 				FD9E6A1722AE68B200C3D355 /* Products */,
+				2E94083E758E21CB01EEC0B4 /* Pods */,
+				663784F08C8F76639E13BBA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +240,7 @@
 			children = (
 				FD9E6A5422AEC80B00C3D355 /* UITextField+Extension.swift */,
 				FD9E6A5622AEC85600C3D355 /* UIColor+Extension.swift */,
+				FDC2C66D22B0DA3F00640A97 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD9E6A2B22AE68B300C3D355 /* Build configuration list for PBXNativeTarget "SkyFind" */;
 			buildPhases = (
+				F81EA9B400FF2701B6E516B5 /* [CP] Check Pods Manifest.lock */,
 				FD9E6A1222AE68B200C3D355 /* Sources */,
 				FD9E6A1322AE68B200C3D355 /* Frameworks */,
 				FD9E6A1422AE68B200C3D355 /* Resources */,
+				309220CF749F9D33FD46EFE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,11 +311,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		309220CF749F9D33FD46EFE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F81EA9B400FF2701B6E516B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkyFind-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD9E6A1222AE68B200C3D355 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC2C66E22B0DA3F00640A97 /* UIViewController+Extension.swift in Sources */,
 				FD9E6A3422AE693100C3D355 /* HTTPTask.swift in Sources */,
 				FD6966A722AF9AC400D4C2B4 /* AirportListCell.swift in Sources */,
 				FD9E6A5922AECAFE00C3D355 /* SearchViewController+UI.swift in Sources */,
@@ -306,6 +392,7 @@
 				FD9E6A2222AE68B200C3D355 /* SkyFind.xcdatamodeld in Sources */,
 				FD9E6A3E22AE698600C3D355 /* URLParameterEncoder.swift in Sources */,
 				FD9E6A4922AE90BB00C3D355 /* AirportModel.swift in Sources */,
+				FDC2C66C22B0D72000640A97 /* AirportViewModel+Extension.swift in Sources */,
 				FD9E6A4522AE900200C3D355 /* TokenModel.swift in Sources */,
 				FD9E6A5522AEC80B00C3D355 /* UITextField+Extension.swift in Sources */,
 				FD9E6A4722AE90A800C3D355 /* FlightModel.swift in Sources */,
@@ -433,6 +520,7 @@
 		};
 		FD9E6A2C22AE68B300C3D355 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FC91D971D7666C479BB2304 /* Pods-SkyFind.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +538,7 @@
 		};
 		FD9E6A2D22AE68B300C3D355 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE74C69B8F6BBF843282DC42 /* Pods-SkyFind.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

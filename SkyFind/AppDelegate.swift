@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SwiftKeychainWrapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        self.getToken()
         window = UIWindow()
         window?.makeKeyAndVisible()
 
@@ -93,5 +95,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func getToken() {
+        let networkManager = NetworkManager()
+        networkManager.getToken("4by7kgw26nzt7rsqx2f3rpkr", secret: "THH4EdQYuF") { response, error in
+            if let error = error {
+                debugPrint(error.debugDescription)
+            }
+
+            if let response = response {
+                KeychainWrapper.standard.set(response.access_token, forKey: "TokenModel")
+                KeychainWrapper.standard.set("\(response.validity_period)", forKey: "ValidityTime")
+            }
+        }
+    }
 }
 
