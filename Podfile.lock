@@ -1,4 +1,9 @@
 PODS:
+  - GoogleMaps (3.1.0):
+    - GoogleMaps/Maps (= 3.1.0)
+  - GoogleMaps/Base (3.1.0)
+  - GoogleMaps/Maps (3.1.0):
+    - GoogleMaps/Base
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -8,23 +13,26 @@ PODS:
   - SwiftKeychainWrapper (3.3.0)
 
 DEPENDENCIES:
+  - GoogleMaps
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SwiftKeychainWrapper
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GoogleMaps
     - RxCocoa
     - RxRelay
     - RxSwift
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
+  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftKeychainWrapper: ef5ad793bc0e08e24a5913f28345b8f7bc8e4123
 
-PODFILE CHECKSUM: 8614a1b9ddd97604166a19356bc354253acaac7c
+PODFILE CHECKSUM: b6ac3e5dde945351997bfe9a2864f2dc5cf14ad9
 
 COCOAPODS: 1.5.3

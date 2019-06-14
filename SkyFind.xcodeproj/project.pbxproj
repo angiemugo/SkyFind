@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D15425307488AB542CF72C71 /* Pods_SkyFind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94286BC569CAAB4A836E0100 /* Pods_SkyFind.framework */; };
+		FD035C3122B2BDA6007D3754 /* FlightScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD035C3022B2BDA6007D3754 /* FlightScheduleViewController.swift */; };
+		FD035C3322B2C009007D3754 /* FlightScheduleDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD035C3222B2C009007D3754 /* FlightScheduleDelegate+extension.swift */; };
+		FD035C3522B2C046007D3754 /* FlightScheduleUI+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD035C3422B2C046007D3754 /* FlightScheduleUI+extension.swift */; };
 		FD6966A022AF9A7400D4C2B4 /* AirportListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69669F22AF9A7400D4C2B4 /* AirportListViewModel.swift */; };
 		FD6966A422AF9AA400D4C2B4 /* AirportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966A322AF9AA400D4C2B4 /* AirportListViewController.swift */; };
 		FD6966A722AF9AC400D4C2B4 /* AirportListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966A622AF9AC400D4C2B4 /* AirportListCell.swift */; };
@@ -42,6 +45,9 @@
 		3FC91D971D7666C479BB2304 /* Pods-SkyFind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind.debug.xcconfig"; sourceTree = "<group>"; };
 		94286BC569CAAB4A836E0100 /* Pods_SkyFind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyFind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE74C69B8F6BBF843282DC42 /* Pods-SkyFind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFind.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind.release.xcconfig"; sourceTree = "<group>"; };
+		FD035C3022B2BDA6007D3754 /* FlightScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScheduleViewController.swift; sourceTree = "<group>"; };
+		FD035C3222B2C009007D3754 /* FlightScheduleDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightScheduleDelegate+extension.swift"; sourceTree = "<group>"; };
+		FD035C3422B2C046007D3754 /* FlightScheduleUI+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightScheduleUI+extension.swift"; sourceTree = "<group>"; };
 		FD69669F22AF9A7400D4C2B4 /* AirportListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewModel.swift; sourceTree = "<group>"; };
 		FD6966A322AF9AA400D4C2B4 /* AirportListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewController.swift; sourceTree = "<group>"; };
 		FD6966A622AF9AC400D4C2B4 /* AirportListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListCell.swift; sourceTree = "<group>"; };
@@ -101,6 +107,22 @@
 				94286BC569CAAB4A836E0100 /* Pods_SkyFind.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD035C2E22B2BD7D007D3754 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FD035C2F22B2BD8C007D3754 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD035C3222B2C009007D3754 /* FlightScheduleDelegate+extension.swift */,
+				FD035C3422B2C046007D3754 /* FlightScheduleUI+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FD6966A122AF9A7800D4C2B4 /* ViewModel */ = {
@@ -214,6 +236,9 @@
 		FD9E6A4C22AEC5DA00C3D355 /* FlightSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				FD035C2F22B2BD8C007D3754 /* Extensions */,
+				FD035C2E22B2BD7D007D3754 /* ViewModel */,
+				FD035C3022B2BDA6007D3754 /* FlightScheduleViewController.swift */,
 			);
 			path = FlightSchedule;
 			sourceTree = "<group>";
@@ -257,6 +282,7 @@
 				FD9E6A1322AE68B200C3D355 /* Frameworks */,
 				FD9E6A1422AE68B200C3D355 /* Resources */,
 				309220CF749F9D33FD46EFE5 /* [CP] Embed Pods Frameworks */,
+				2F63C03B12D119F51B20315A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,6 +338,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2F63C03B12D119F51B20315A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		309220CF749F9D33FD46EFE5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,8 +442,11 @@
 				FD9E6A4922AE90BB00C3D355 /* AirportModel.swift in Sources */,
 				FDC2C66C22B0D72000640A97 /* AirportViewModel+Extension.swift in Sources */,
 				FD9E6A4522AE900200C3D355 /* TokenModel.swift in Sources */,
+				FD035C3322B2C009007D3754 /* FlightScheduleDelegate+extension.swift in Sources */,
+				FD035C3522B2C046007D3754 /* FlightScheduleUI+extension.swift in Sources */,
 				FD9E6A5522AEC80B00C3D355 /* UITextField+Extension.swift in Sources */,
 				FD9E6A4722AE90A800C3D355 /* FlightModel.swift in Sources */,
+				FD035C3122B2BDA6007D3754 /* FlightScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
