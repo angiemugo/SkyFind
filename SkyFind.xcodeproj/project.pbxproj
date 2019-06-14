@@ -282,7 +282,6 @@
 				FD9E6A1322AE68B200C3D355 /* Frameworks */,
 				FD9E6A1422AE68B200C3D355 /* Resources */,
 				309220CF749F9D33FD46EFE5 /* [CP] Embed Pods Frameworks */,
-				2F63C03B12D119F51B20315A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -338,28 +337,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F63C03B12D119F51B20315A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyFind/Pods-SkyFind-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		309220CF749F9D33FD46EFE5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
