@@ -49,19 +49,19 @@ class ScheduleCell: UITableViewCell {
         self.selectionStyle = .none
 
         guard let schedule = schedule else { return }
-        flightNameLabel.text = schedule.totalJourney.duration
-        departLabel.text = schedule.totalJourney.duration
-        arrivalLabel.text = schedule.totalJourney.duration
+        flightNameLabel.text = "From: \(schedule.flight[0].departure.aiportCode), To: \(schedule.flight[0].arrival.aiportCode)"
+        departLabel.text = "Departs at: \(schedule.flight[0].departure.scheduledTime.time)"
+        arrivalLabel.text = "Arrives at: \(schedule.flight[0].arrival.scheduledTime.time)"
 
         flightNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         flightNameLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         flightNameLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
 
-        departLabel.topAnchor.constraint(equalTo: flightNameLabel.bottomAnchor, constant: -8).isActive = true
+        departLabel.topAnchor.constraint(equalTo: flightNameLabel.bottomAnchor, constant: 16).isActive = true
         departLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         departLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
 
-        arrivalLabel.topAnchor.constraint(equalTo: departLabel.bottomAnchor, constant: -8).isActive = true
+        arrivalLabel.topAnchor.constraint(equalTo: departLabel.bottomAnchor, constant: 16).isActive = true
         arrivalLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         arrivalLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
     }

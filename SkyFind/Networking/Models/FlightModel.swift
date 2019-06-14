@@ -46,7 +46,7 @@ extension Schedules: Decodable {
 
 struct Schedule {
     var totalJourney: TotalJourney
-    var flight: Flight
+    var flight: [Flight]
 }
 
 extension Schedule: Decodable {
@@ -59,7 +59,7 @@ extension Schedule: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
         totalJourney = try container.decode(TotalJourney.self, forKey: .TotalJourney)
-        flight = try container.decode(Flight.self, forKey: .Flight)
+        flight = try container.decode([Flight].self, forKey: .Flight)
     }
 }
 

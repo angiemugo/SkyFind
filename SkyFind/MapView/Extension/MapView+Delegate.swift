@@ -12,23 +12,15 @@ import MapKit
 extension MapViewController {
 
     func setupUI() {
-        let mapView = MKMapView()
-
-        mapView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        mapView.mapType = MKMapType.standard
-        mapView.isZoomEnabled = true
-        mapView.isScrollEnabled = true
         mapView.showsPointsOfInterest = true
-
-        mapView.center = view.center
-        view.addSubview(mapView)
-        createPolyline()
     }
 
     func createPolyline() {
-        let locations = [CLLocation(latitude: 32, longitude: -96), CLLocation(latitude: 37, longitude: -122)]
-        var coordinates = locations.map({(location: CLLocation!) -> CLLocationCoordinate2D in return location.coordinate})
+        guard let origin = originPosition else { return }
+        guard let destination = destinationPosition else { return }
 
+        let locations = [CLLocation(latitude: origin.coordinate.latitude, longitude: origin.coordinate.longitude), CLLocation(latitude: destination.coordinate.latitude, longitude: destination.coordinate.longitude)]
+        var coordinates = locations.map({(location: CLLocation!) -> CLLocationCoordinate2D in return location.coordinate})
         let aPolyline = MKPolyline(coordinates: &coordinates, count: locations.count)
         mapView.addOverlay(aPolyline)
         zoomToPolyLine(map: mapView, polyLine: aPolyline, animated: true)
@@ -37,14 +29,13 @@ extension MapViewController {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
             let polylineRender  = MKPolylineRenderer(overlay: overlay)
-            polylineRender.strokeColor = UIColor.blue.withAlphaComponent(0.5)
-            polylineRender.lineWidth = 5
+            polylineRender.strokeColor = UIColor.blue
+            polylineRender.lineWidth = 2.0
             return polylineRender
         }
 
         return MKPolylineRenderer()
     }
-
 
     func zoomToPolyLine(map : MKMapView, polyLine : MKPolyline, animated : Bool){
         map.setRegion(MKCoordinateRegion(polyLine.boundingMapRect), animated: animated)

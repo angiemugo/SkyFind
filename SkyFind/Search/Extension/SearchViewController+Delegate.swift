@@ -12,11 +12,13 @@ extension SearchViewController: AiportListViewDelegate {
     func getAirport(_ destination: Airport?, _ origin: Airport?) {
         if let destination = destination {
             self.destinationTextField.text = "\(destination.airportCode), \(destination.location)"
+            self.destinationAirport = destination
             self.destination.accept(destination.airportCode)
         }
 
         if let origin = origin {
             self.originTextField.text = "\(origin.airportCode), \(origin.location)"
+            self.originAirport = origin
             self.origin.accept(origin.airportCode)
         }
     }

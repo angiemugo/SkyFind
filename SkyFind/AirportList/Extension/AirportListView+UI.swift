@@ -29,7 +29,7 @@ extension AirportListViewController {
 
     @objc func back() {
         guard let airport = selectedAirport else {
-            self.showAlert("Airports", body: "Please select an airport")
+            self.navigationController?.popViewController(animated: true)
             return
         }
         

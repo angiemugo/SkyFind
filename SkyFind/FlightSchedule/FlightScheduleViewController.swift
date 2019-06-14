@@ -18,18 +18,18 @@ class FlightScheduleController: UIViewController {
         return view
     }()
 
-
     var schedules = BehaviorRelay<[Schedule]>(value: [Schedule]())
     var originAirport: Airport?
     var destinationAiport: Airport?
 
     struct Constants {
-        static var AIRPORT_CELL = "Schedules"
+        static var SCHEDULE_CELL = "Schedules"
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mainTableview.register(ScheduleCell.self, forCellReuseIdentifier: Constants.SCHEDULE_CELL)
         self.setupUI()
     }
 }

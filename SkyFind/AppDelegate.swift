@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.getToken()
         window = UIWindow()
         window?.makeKeyAndVisible()
 
         let searchView = SearchViewController()
         let navigationController = UINavigationController(rootViewController: searchView)
         window?.rootViewController = navigationController
+        getToken()
         return true
     }
 
@@ -97,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func getToken() {
         let networkManager = NetworkManager()
-        networkManager.getToken("4by7kgw26nzt7rsqx2f3rpkr", secret: "THH4EdQYuF") { response, error in
+        networkManager.getToken("wbbvc7g5urb58e5b4k7asqwv", secret: "gTmGPuh2WJ") { response, error in
             if let error = error {
                 debugPrint(error.debugDescription)
             }

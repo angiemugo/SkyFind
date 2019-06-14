@@ -58,6 +58,12 @@ class AirportListViewController: UIViewController, UISearchResultsUpdating {
                                          refreshControl: refreshControl.rx.controlEvent(.valueChanged).asDriver())
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        self.searchController.isActive = false
+    }
+
     func configureSearchController() {
         self.searchController = ({
             let controller = UISearchController(searchResultsController: nil)

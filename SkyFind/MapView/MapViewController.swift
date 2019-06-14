@@ -13,22 +13,15 @@ import RxCocoa
 
 class MapViewController: UIViewController, MKMapViewDelegate {
 
-    var mapView: MKMapView = {
-        let view = MKMapView()
-        view.mapType = MKMapType.standard
-        view.isZoomEnabled = true
-        view.isScrollEnabled = true
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    var latitude: Double?
-    var longitude: Double?
+    @IBOutlet var mapView: MKMapView!
+    var originPosition: Position?
+    var destinationPosition: Position?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mapView.showsPointsOfInterest = true
         mapView.delegate = self
         self.setupUI()
+        self.createPolyline()
     }
 }

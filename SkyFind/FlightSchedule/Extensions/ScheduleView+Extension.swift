@@ -14,7 +14,7 @@ extension FlightScheduleController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.AIRPORT_CELL, for: indexPath) as! ScheduleCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.SCHEDULE_CELL, for: indexPath) as! ScheduleCell
         cell.schedule = schedules.value[indexPath.row]
         return cell
     }
@@ -24,13 +24,13 @@ extension FlightScheduleController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
+        return 128
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mapView = MapViewController()
-        mapView.latitude = destinationAiport?.position.coordinate.latitude
-        mapView.longitude = destinationAiport?.position.coordinate.latitude
+        guard let mapView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else { return }
+        mapView.originPosition = originAirport?.position
+        mapView.destinationPosition = destinationAiport?.position
         self.navigationController?.pushViewController(mapView, animated: true)
     }
 
