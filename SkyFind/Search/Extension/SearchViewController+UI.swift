@@ -45,7 +45,7 @@ extension SearchViewController {
         searchButton.rightAnchor.constraint(equalTo: mainView.rightAnchor, constant: -48).isActive = true
         searchButton.heightAnchor.constraint(equalToConstant: 55).isActive = true
         searchButton.topAnchor.constraint(equalTo: dateTextField.bottomAnchor, constant: 32).isActive = true
-        searchButton.addTarget(self, action: #selector(didTapSearch), for: .touchUpInside)
+//        searchButton.addTarget(self, action: #selector(didTapSearch), for: .touchUpInside)
     }
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -55,8 +55,8 @@ extension SearchViewController {
         return false
     }
 
-    @objc func didTapSearch() {
-        let view = FlightScheduleViewController()
-        self.navigationController?.pushViewController(view, animated: true)
-    }
+//    @objc func didTapSearch() {
+//        let view = FlightScheduleViewController()
+//        self.navigationController?.pushViewController(view, animated: true)
+//    }
 }

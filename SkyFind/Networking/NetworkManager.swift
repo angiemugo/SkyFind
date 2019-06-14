@@ -100,8 +100,13 @@ struct NetworkManager {
         }
     }
 
-    func getSchedule(_ origin: String, destination: String, date: String, directFlights: Bool?, completion: @escaping (_ flightSchedule: ScheduleResource?, _ error: String?) -> ()) {
-        router.request(.GetFlightSchedule(origin: origin, destination: destination, date: date, directFlights: directFlights)) { data, response, error in
+    func getSchedule(_ origin: String, destination: String, date: String, completion: @escaping (_ flightSchedule: ScheduleResource?, _ error: String?) -> ()) {
+        guard let token = KeychainWrapper.standard.string(forKey: "token") else {
+            return
+            //implement logic to kick off fetching the token
+        }
+
+        router.request(.GetFlightSchedule(token: token, origin: origin, destination: destination, date: date)) { data, response, error in
             if error != nil {
                 completion(nil, "Please check your network connection")
             }

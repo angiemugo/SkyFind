@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
 
@@ -89,9 +91,21 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         return button
     }()
 
+    let disposeBag = DisposeBag()
+    var viewModel: SearchViewModel? {
+        didSet {
+            setupViewModel()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        viewModel = SearchViewModel(withManager: NetworkManager(),
+                                    origin: originTextField.rx.text.orEmpty.asDriver(),
+                                    destination: destinationTextField.rx.text.orEmpty.asDriver(),
+                                    date: dateTextField.rx.text.orEmpty.asDriver(),
+                                    searchButton: searchButton.rx.tap.asDriver())
     }
 }

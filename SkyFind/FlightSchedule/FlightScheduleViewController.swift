@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import RxSwift
+import RxCocoa
 
 class FlightScheduleViewController: UIViewController, MKMapViewDelegate {
 
@@ -19,6 +21,8 @@ class FlightScheduleViewController: UIViewController, MKMapViewDelegate {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+
+    var destinations = BehaviorRelay<[Schedule]>(value: [Schedule]())
 
     override func viewDidLoad() {
         super.viewDidLoad()

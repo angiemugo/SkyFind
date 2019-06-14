@@ -11,7 +11,7 @@ import Foundation
 enum API {
     case GetAirports(token: String)
     case GetToken(clientID: String, clientSecret: String)
-    case GetFlightSchedule(origin: String, destination: String, date: String, directFlights: Bool?)
+    case GetFlightSchedule(token: String, origin: String, destination: String, date: String)
 }
 
 extension API: EndPointType {
@@ -58,8 +58,8 @@ extension API: EndPointType {
         case .GetToken(let clientId, let secret):
             return .RequestFormEncoded(bodyParameters: ["client_id": clientId, "client_secret": secret, "grant_type": "client_credentials"])
 
-        case .GetFlightSchedule(let origin, let destination, let date, let directFlights):
-            return .RequestParametersAndHeaders(bodyParameters: ["origin": origin, "destination": destination, "fromDateTime": date, "directFlights": directFlights ?? false], urlParameters: nil, additionalHeaders: nil)
+        case .GetFlightSchedule(let token, let origin, let destination, let date):
+            return .RequestParametersAndHeaders(bodyParameters: ["origin": origin, "destination": destination, "fromDateTime": date], urlParameters: nil, additionalHeaders: ["Authorization": "Bearer \(token)"])
         }
     }
 }

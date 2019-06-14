@@ -11,12 +11,16 @@
 		FD035C3122B2BDA6007D3754 /* FlightScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD035C3022B2BDA6007D3754 /* FlightScheduleViewController.swift */; };
 		FD035C3322B2C009007D3754 /* FlightScheduleDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD035C3222B2C009007D3754 /* FlightScheduleDelegate+extension.swift */; };
 		FD035C3522B2C046007D3754 /* FlightScheduleUI+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD035C3422B2C046007D3754 /* FlightScheduleUI+extension.swift */; };
-		FD6966A022AF9A7400D4C2B4 /* AirportListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69669F22AF9A7400D4C2B4 /* AirportListViewModel.swift */; };
 		FD6966A422AF9AA400D4C2B4 /* AirportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966A322AF9AA400D4C2B4 /* AirportListViewController.swift */; };
 		FD6966A722AF9AC400D4C2B4 /* AirportListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966A622AF9AC400D4C2B4 /* AirportListCell.swift */; };
 		FD6966A922AF9DEE00D4C2B4 /* AirportListView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966A822AF9DEE00D4C2B4 /* AirportListView+UI.swift */; };
 		FD6966AB22AF9E5400D4C2B4 /* AirportListView+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966AA22AF9E5400D4C2B4 /* AirportListView+Delegate.swift */; };
 		FD6966AD22B034F600D4C2B4 /* SearchViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6966AC22B034F600D4C2B4 /* SearchViewController+Delegate.swift */; };
+		FD83DC2122B374660009007E /* SearchViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC2022B374660009007E /* SearchViewModel+Extension.swift */; };
+		FD83DC2322B375360009007E /* AirportListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC2222B375360009007E /* AirportListViewModel.swift */; };
+		FD83DC2622B3783B0009007E /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC2522B3783B0009007E /* Loader.swift */; };
+		FD83DC2922B3787C0009007E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC2822B3787C0009007E /* LoaderView.swift */; };
+		FD83DC2B22B378A90009007E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC2A22B378A90009007E /* UIView+Extension.swift */; };
 		FD9E6A1A22AE68B200C3D355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A1922AE68B200C3D355 /* AppDelegate.swift */; };
 		FD9E6A2222AE68B200C3D355 /* SkyFind.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD9E6A2022AE68B200C3D355 /* SkyFind.xcdatamodeld */; };
 		FD9E6A2422AE68B300C3D355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9E6A2322AE68B300C3D355 /* Assets.xcassets */; };
@@ -48,12 +52,16 @@
 		FD035C3022B2BDA6007D3754 /* FlightScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScheduleViewController.swift; sourceTree = "<group>"; };
 		FD035C3222B2C009007D3754 /* FlightScheduleDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightScheduleDelegate+extension.swift"; sourceTree = "<group>"; };
 		FD035C3422B2C046007D3754 /* FlightScheduleUI+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightScheduleUI+extension.swift"; sourceTree = "<group>"; };
-		FD69669F22AF9A7400D4C2B4 /* AirportListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewModel.swift; sourceTree = "<group>"; };
 		FD6966A322AF9AA400D4C2B4 /* AirportListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewController.swift; sourceTree = "<group>"; };
 		FD6966A622AF9AC400D4C2B4 /* AirportListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListCell.swift; sourceTree = "<group>"; };
 		FD6966A822AF9DEE00D4C2B4 /* AirportListView+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirportListView+UI.swift"; sourceTree = "<group>"; };
 		FD6966AA22AF9E5400D4C2B4 /* AirportListView+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirportListView+Delegate.swift"; sourceTree = "<group>"; };
 		FD6966AC22B034F600D4C2B4 /* SearchViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Delegate.swift"; sourceTree = "<group>"; };
+		FD83DC2022B374660009007E /* SearchViewModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewModel+Extension.swift"; sourceTree = "<group>"; };
+		FD83DC2222B375360009007E /* AirportListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportListViewModel.swift; sourceTree = "<group>"; };
+		FD83DC2522B3783B0009007E /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		FD83DC2822B3787C0009007E /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		FD83DC2A22B378A90009007E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FD9E6A1622AE68B200C3D355 /* SkyFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9E6A1922AE68B200C3D355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD9E6A2122AE68B200C3D355 /* SkyFind.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkyFind.xcdatamodel; sourceTree = "<group>"; };
@@ -109,13 +117,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FD035C2E22B2BD7D007D3754 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		FD035C2F22B2BD8C007D3754 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,14 +124,6 @@
 				FD035C3422B2C046007D3754 /* FlightScheduleUI+extension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		FD6966A122AF9A7800D4C2B4 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				FD69669F22AF9A7400D4C2B4 /* AirportListViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FD6966A222AF9A8200D4C2B4 /* Extension */ = {
@@ -151,9 +144,27 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		FD83DC2422B3753B0009007E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD83DC2222B375360009007E /* AirportListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FD83DC2722B378410009007E /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD83DC2522B3783B0009007E /* Loader.swift */,
+				FD83DC2822B3787C0009007E /* LoaderView.swift */,
+			);
+			path = BaseViews;
+			sourceTree = "<group>";
+		};
 		FD9E6A0D22AE68B200C3D355 = {
 			isa = PBXGroup;
 			children = (
+				FD83DC2722B378410009007E /* BaseViews */,
 				FD9E6A1822AE68B200C3D355 /* SkyFind */,
 				FD9E6A1722AE68B200C3D355 /* Products */,
 				2E94083E758E21CB01EEC0B4 /* Pods */,
@@ -225,9 +236,9 @@
 		FD9E6A4B22AEC5C000C3D355 /* AirportList */ = {
 			isa = PBXGroup;
 			children = (
+				FD83DC2422B3753B0009007E /* ViewModel */,
 				FD6966A522AF9AB200D4C2B4 /* Cell */,
 				FD6966A222AF9A8200D4C2B4 /* Extension */,
-				FD6966A122AF9A7800D4C2B4 /* ViewModel */,
 				FD6966A322AF9AA400D4C2B4 /* AirportListViewController.swift */,
 			);
 			path = AirportList;
@@ -237,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				FD035C2F22B2BD8C007D3754 /* Extensions */,
-				FD035C2E22B2BD7D007D3754 /* ViewModel */,
 				FD035C3022B2BDA6007D3754 /* FlightScheduleViewController.swift */,
 			);
 			path = FlightSchedule;
@@ -248,6 +258,7 @@
 			children = (
 				FD9E6A5822AECAFE00C3D355 /* SearchViewController+UI.swift */,
 				FD6966AC22B034F600D4C2B4 /* SearchViewController+Delegate.swift */,
+				FD83DC2022B374660009007E /* SearchViewModel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -266,6 +277,7 @@
 				FD9E6A5422AEC80B00C3D355 /* UITextField+Extension.swift */,
 				FD9E6A5622AEC85600C3D355 /* UIColor+Extension.swift */,
 				FDC2C66D22B0DA3F00640A97 /* UIViewController+Extension.swift */,
+				FD83DC2A22B378A90009007E /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +410,7 @@
 				FD9E6A3422AE693100C3D355 /* HTTPTask.swift in Sources */,
 				FD6966A722AF9AC400D4C2B4 /* AirportListCell.swift in Sources */,
 				FD9E6A5922AECAFE00C3D355 /* SearchViewController+UI.swift in Sources */,
+				FD83DC2122B374660009007E /* SearchViewModel+Extension.swift in Sources */,
 				FD9E6A3022AE690B00C3D355 /* EndPointType.swift in Sources */,
 				FD6966AD22B034F600D4C2B4 /* SearchViewController+Delegate.swift in Sources */,
 				FD9E6A3622AE693B00C3D355 /* Router.swift in Sources */,
@@ -405,7 +418,6 @@
 				FD9E6A5722AEC85600C3D355 /* UIColor+Extension.swift in Sources */,
 				FD6966AB22AF9E5400D4C2B4 /* AirportListView+Delegate.swift in Sources */,
 				FD9E6A4022AE69A200C3D355 /* JSONParameterEncoder.swift in Sources */,
-				FD6966A022AF9A7400D4C2B4 /* AirportListViewModel.swift in Sources */,
 				FD9E6A4222AE701700C3D355 /* NetworkRouter.swift in Sources */,
 				FD9E6A3822AE694600C3D355 /* NetworkManager.swift in Sources */,
 				FD9E6A5022AEC67C00C3D355 /* SearchViewModel.swift in Sources */,
@@ -414,15 +426,19 @@
 				FD9E6A3A22AE695000C3D355 /* API.swift in Sources */,
 				FD6966A422AF9AA400D4C2B4 /* AirportListViewController.swift in Sources */,
 				FD9E6A5222AEC68D00C3D355 /* SearchViewController.swift in Sources */,
+				FD83DC2B22B378A90009007E /* UIView+Extension.swift in Sources */,
 				FD9E6A2222AE68B200C3D355 /* SkyFind.xcdatamodeld in Sources */,
 				FD9E6A3E22AE698600C3D355 /* URLParameterEncoder.swift in Sources */,
 				FD9E6A4922AE90BB00C3D355 /* AirportModel.swift in Sources */,
+				FD83DC2922B3787C0009007E /* LoaderView.swift in Sources */,
 				FDC2C66C22B0D72000640A97 /* AirportViewModel+Extension.swift in Sources */,
 				FD9E6A4522AE900200C3D355 /* TokenModel.swift in Sources */,
 				FD035C3322B2C009007D3754 /* FlightScheduleDelegate+extension.swift in Sources */,
 				FD035C3522B2C046007D3754 /* FlightScheduleUI+extension.swift in Sources */,
 				FD9E6A5522AEC80B00C3D355 /* UITextField+Extension.swift in Sources */,
 				FD9E6A4722AE90A800C3D355 /* FlightModel.swift in Sources */,
+				FD83DC2322B375360009007E /* AirportListViewModel.swift in Sources */,
+				FD83DC2622B3783B0009007E /* Loader.swift in Sources */,
 				FD035C3122B2BDA6007D3754 /* FlightScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
