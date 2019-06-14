@@ -38,7 +38,11 @@ extension AirportListViewController: UITableViewDelegate, UITableViewDataSource 
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCell = indexPath.row
-        selectedAirport = airports[indexPath.row]
+        if isFiltering() {
+            selectedAirport = filteredAirports[indexPath.row]
+        } else {
+            selectedAirport = airports[indexPath.row]
+        }
         self.mainTableview.reloadData()
     }
 

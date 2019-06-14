@@ -65,6 +65,11 @@ class SearchViewModel {
             return
         }
 
+        guard self._origin.value != self._destination.value else {
+            self._appProgress.accept((message: "The origin and destination cannot be the same.", loading: false, done: nil))
+            return
+        }
+
         _buttonEnabled.accept(true)
         self.sendData(_origin.value, _destination.value, _date.value)
     }

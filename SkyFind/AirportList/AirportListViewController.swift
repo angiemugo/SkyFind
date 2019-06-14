@@ -15,12 +15,6 @@ protocol AiportListViewDelegate {
 }
 
 class AirportListViewController: UIViewController, UISearchResultsUpdating {
-    let mainView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.white
-        return view
-    }()
 
     let mainTableview: UITableView = {
         let view = UITableView()
@@ -28,7 +22,7 @@ class AirportListViewController: UIViewController, UISearchResultsUpdating {
         return view
     }()
 
-    var searchController = UISearchController()
+    var searchController = UISearchController(searchResultsController: nil)
     var delegate: AiportListViewDelegate?
     let refreshControl = UIRefreshControl()
     var selectedCell: Int?
@@ -51,22 +45,28 @@ class AirportListViewController: UIViewController, UISearchResultsUpdating {
         super.viewDidLoad()
 
         self.setupUI()
-        searchController = ({
-            let controller = UISearchController(searchResultsController: nil)
-            controller.searchResultsUpdater = self
-            controller.dimsBackgroundDuringPresentation = false
-            controller.searchBar.sizeToFit()
-
-            mainTableview.tableHeaderView = controller.searchBar
-
-            return controller
-        })()
         self.navigationItem.title = "Airports"
         mainTableview.register(AirportListCell.self, forCellReuseIdentifier: Constants.AIRPORT_CELL)
         mainTableview.tableFooterView = UIView()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "leftArrow"), style: .plain, target: self, action: #selector(back))
+        self.configureSearchController()
         viewModel = AirportListViewModel(with: NetworkManager(),
                                          refreshControl: refreshControl.rx.controlEvent(.valueChanged).asDriver())
+    }
+
+    func configureSearchController() {
+        self.searchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.hidesNavigationBarDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            controller.searchBar.setShowsCancelButton(false, animated: true)
+            controller.searchBar.keyboardAppearance = .default
+            controller.searchBar.placeholder = "Search for aiports"
+            self.mainTableview.tableHeaderView = controller.searchBar
+            return controller
+        })()
     }
 
     func searchBarIsEmpty() -> Bool {
@@ -82,6 +82,6 @@ class AirportListViewController: UIViewController, UISearchResultsUpdating {
     }
 
     func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
+        return  !searchBarIsEmpty()
     }
 }
