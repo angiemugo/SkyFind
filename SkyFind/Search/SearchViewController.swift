@@ -33,6 +33,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         textField.setupDefaultTextfieldConfig()
         textField.attributedPlaceholder = NSAttributedString(string: "Select the airport to depart from",
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        textField.tag = 0
         let rightImage = UIImageView(frame: CGRect(x: 10, y: 10, width: 32, height: 32))
         rightImage.image = #imageLiteral(resourceName: "rightArrow")
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -48,6 +49,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         textField.setupDefaultTextfieldConfig()
         textField.attributedPlaceholder = NSAttributedString(string: "Select your destination airport",
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        textField.tag = 1
         textField.translatesAutoresizingMaskIntoConstraints = false
 
         let rightImage = UIImageView(frame: CGRect(x: 10, y: 10, width: 32, height: 32))
@@ -67,10 +69,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         textField.translatesAutoresizingMaskIntoConstraints = false
 
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = UIDatePicker.Mode.date
-        textField.inputView = datePicker
-
         let rightImage = UIImageView(frame: CGRect(x: 10, y: 10, width: 32, height: 32))
         rightImage.image = #imageLiteral(resourceName: "downArrow")
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -79,6 +77,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         textField.rightView = view
         textField.rightViewMode = .always
         return textField
+    }()
+
+    let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        return datePicker
     }()
 
     let searchButton: UIButton = {
@@ -98,14 +102,22 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    //because RXSwift does not detect changes in textfield unless they are triggered by the user. In this case mine were triggered by the table view. Could be done better
+    var origin = BehaviorRelay<String>(value: "origin")
+    var destination = BehaviorRelay<String>(value: "date")
+    var date = BehaviorRelay<String>(value: "")
+    var destinationAirport: Airport?
+    var originAirport: Airport?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        self.view.endEditing(true)
         viewModel = SearchViewModel(withManager: NetworkManager(),
-                                    origin: originTextField.rx.text.orEmpty.asDriver(),
-                                    destination: destinationTextField.rx.text.orEmpty.asDriver(),
-                                    date: dateTextField.rx.text.orEmpty.asDriver(),
+                                    origin: origin.asDriver(),
+                                    destination: destination.asDriver(),
+                                    date: date.asDriver(),
                                     searchButton: searchButton.rx.tap.asDriver())
-    }
+    }  
 }

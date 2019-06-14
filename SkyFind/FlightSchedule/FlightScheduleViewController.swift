@@ -7,27 +7,29 @@
 //
 
 import UIKit
-import MapKit
 import RxSwift
 import RxCocoa
 
-class FlightScheduleViewController: UIViewController, MKMapViewDelegate {
+class FlightScheduleController: UIViewController {
 
-    var mapView: MKMapView = {
-        let view = MKMapView()
-        view.mapType = MKMapType.standard
-        view.isZoomEnabled = true
-        view.isScrollEnabled = true
+    let mainTableview: UITableView = {
+        let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    var destinations = BehaviorRelay<[Schedule]>(value: [Schedule]())
+
+    var schedules = BehaviorRelay<[Schedule]>(value: [Schedule]())
+    var originAirport: Airport?
+    var destinationAiport: Airport?
+
+    struct Constants {
+        static var AIRPORT_CELL = "Schedules"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mapView.delegate = self
         self.setupUI()
     }
 }

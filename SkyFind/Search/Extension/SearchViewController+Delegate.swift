@@ -9,7 +9,15 @@
 import Foundation
 
 extension SearchViewController: AiportListViewDelegate {
-    func getAirport(_ airport: String) {
-        self.destinationTextField.text = airport
+    func getAirport(_ destination: Airport?, _ origin: Airport?) {
+        if let destination = destination {
+            self.destinationTextField.text = "\(destination.airportCode), \(destination.location)"
+            self.destination.accept(destination.airportCode)
+        }
+
+        if let origin = origin {
+            self.originTextField.text = "\(origin.airportCode), \(origin.location)"
+            self.origin.accept(origin.airportCode)
+        }
     }
 }

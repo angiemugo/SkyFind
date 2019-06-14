@@ -11,6 +11,7 @@ import UIKit
 class LoaderView: UIView {
 
     @IBOutlet var mainView: UIView!
+
     let backgroundView: UIView! = {
         let view = UIView()
         view.backgroundColor = UIColor.white

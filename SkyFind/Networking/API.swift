@@ -45,8 +45,8 @@ extension API: EndPointType {
         case .GetToken:
             return "oauth/token"
 
-        case .GetFlightSchedule:
-            return "operations/schedules"
+        case .GetFlightSchedule( _, let origin, let destination, let date):
+            return "operations/schedules/\(origin)/\(destination)/\(date)"
         }
     }
 
@@ -58,8 +58,8 @@ extension API: EndPointType {
         case .GetToken(let clientId, let secret):
             return .RequestFormEncoded(bodyParameters: ["client_id": clientId, "client_secret": secret, "grant_type": "client_credentials"])
 
-        case .GetFlightSchedule(let token, let origin, let destination, let date):
-            return .RequestParametersAndHeaders(bodyParameters: ["origin": origin, "destination": destination, "fromDateTime": date], urlParameters: nil, additionalHeaders: ["Authorization": "Bearer \(token)"])
+        case .GetFlightSchedule(let token, _, _, _):
+            return .RequestParametersAndHeaders(bodyParameters: nil, urlParameters: nil, additionalHeaders: ["Authorization": "Bearer \(token)", "Accept": "application/json"])
         }
     }
 }

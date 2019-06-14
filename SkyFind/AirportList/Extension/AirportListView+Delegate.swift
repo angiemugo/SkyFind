@@ -38,7 +38,7 @@ extension AirportListViewController: UITableViewDelegate, UITableViewDataSource 
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCell = indexPath.row
-        selectedAirport = "\(airports[indexPath.row].airportCode), \(airports[indexPath.row].location)"
+        selectedAirport = airports[indexPath.row]
         self.mainTableview.reloadData()
     }
 
@@ -46,5 +46,4 @@ extension AirportListViewController: UITableViewDelegate, UITableViewDataSource 
         filteredAirports.removeAll()
         filterContentForSearchText(searchController.searchBar.text ?? "")
     }
-
 }

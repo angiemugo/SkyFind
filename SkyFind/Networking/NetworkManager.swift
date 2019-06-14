@@ -121,7 +121,8 @@ struct NetworkManager {
                     }
 
                     do {
-                        let apiResponse = try ScheduleResource(from: responseData)
+//                        let apiResponse = try ScheduleResource(from: responseData)
+                        let apiResponse = try JSONDecoder().decode(ScheduleResource.self, from: responseData)
                         completion(apiResponse, nil)
                     } catch let error {
                         completion(nil, error.localizedDescription)

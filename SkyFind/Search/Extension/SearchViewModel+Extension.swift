@@ -16,15 +16,17 @@ extension SearchViewController {
 
             if value.message.count > 0 {
                 if let _ = value.done {
-                    let view = FlightScheduleViewController()
+                    let view = FlightScheduleController()
                     viewModel.schedules.drive(onNext: { [weak self] value in
-                        view.destinations.accept(value)
+                        view.schedules.accept(value)
+                        view.originAirport = self?.originAirport
+                        view.destinationAiport = self?.destinationAirport
                     }).disposed(by: self.disposeBag)
                     self.navigationController?.pushViewController(view, animated: true)
                 } else {
                     self.showNilAlert("Search", body: value.message)
                 }
             }
-        })
+        }).disposed(by: disposeBag)
     }
 }

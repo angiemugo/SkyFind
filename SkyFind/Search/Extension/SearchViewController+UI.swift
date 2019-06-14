@@ -9,9 +9,12 @@ import UIKit
 
 extension SearchViewController {
     func setupUI() {
+        let gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backgroundTap(gesture:)));
+        view.addGestureRecognizer(gestureRecognizer)
+
         view.addSubview(mainView)
-            mainView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-            mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        mainView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         mainView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         mainView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
@@ -40,23 +43,27 @@ extension SearchViewController {
         dateTextField.rightAnchor.constraint(equalTo: mainView.rightAnchor, constant: -16).isActive = true
         dateTextField.topAnchor.constraint(equalTo: destinationTextField.bottomAnchor, constant: 32).isActive = true
         dateTextField.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        dateTextField.inputView = datePicker
 
         searchButton.leftAnchor.constraint(equalTo: mainView.leftAnchor, constant: 48).isActive = true
         searchButton.rightAnchor.constraint(equalTo: mainView.rightAnchor, constant: -48).isActive = true
         searchButton.heightAnchor.constraint(equalToConstant: 55).isActive = true
         searchButton.topAnchor.constraint(equalTo: dateTextField.bottomAnchor, constant: 32).isActive = true
-//        searchButton.addTarget(self, action: #selector(didTapSearch), for: .touchUpInside)
     }
 
+    @objc func backgroundTap(gesture : UITapGestureRecognizer) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        date.accept(formatter.string(from: datePicker.date))
+        dateTextField.text = formatter.string(from: datePicker.date)
+        dateTextField.resignFirstResponder() 
+    }
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         let view = AirportListViewController()
+        view.isDestination = textField.tag == 0 ? false : true
         view.delegate = self
         self.navigationController?.pushViewController(view, animated: true)
         return false
     }
-
-//    @objc func didTapSearch() {
-//        let view = FlightScheduleViewController()
-//        self.navigationController?.pushViewController(view, animated: true)
-//    }
 }

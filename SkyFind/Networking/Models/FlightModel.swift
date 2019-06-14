@@ -9,10 +9,30 @@
 import Foundation
 
 struct ScheduleResource {
-    var schedule: [Schedule]
+    var schedule: Schedules
 }
 
 extension ScheduleResource: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case Schedule = "ScheduleResource"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        schedule = try container.decode(Schedules.self, forKey: .Schedule)
+    }
+
+    init(from data: Data) throws {
+        self = try JSONDecoder().decode(ScheduleResource.self, from: data)
+    }
+}
+
+struct Schedules {
+    var schedule: [Schedule]
+}
+
+extension Schedules: Decodable {
     enum CodingKeys: String, CodingKey {
         case Schedule = "Schedule"
     }
@@ -21,10 +41,6 @@ extension ScheduleResource: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
         schedule = try container.decode([Schedule].self, forKey: .Schedule)
-    }
-
-    init(from data: Data) throws {
-        self = try JSONDecoder().decode(ScheduleResource.self, from: data)
     }
 }
 

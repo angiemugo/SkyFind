@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 protocol AiportListViewDelegate {
-    func getAirport(_ airport: String)
+    func getAirport(_ destination: Airport?, _ origin: Airport?)
 }
 
 class AirportListViewController: UIViewController, UISearchResultsUpdating {
@@ -32,9 +32,10 @@ class AirportListViewController: UIViewController, UISearchResultsUpdating {
     var delegate: AiportListViewDelegate?
     let refreshControl = UIRefreshControl()
     var selectedCell: Int?
-    var selectedAirport: String?
+    var selectedAirport: Airport?
     var airports = [Airport]()
     var filteredAirports = [Airport]()
+    var isDestination = false
     var viewModel: AirportListViewModel? {
         didSet {
             setupViewModel()

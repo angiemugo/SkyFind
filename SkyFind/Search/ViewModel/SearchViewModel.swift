@@ -50,21 +50,20 @@ class SearchViewModel {
     }
 
     func fetchSchedule() {
-        guard self._destination.value.count > 0 else {
-            self._appProgress.accept((message: "The destination is required.", loading: false, done: nil))
-            return
-        }
-
         guard self._origin.value.count > 0 else {
             self._appProgress.accept((message: "The origin is required.", loading: false, done: nil))
             return
         }
 
-        guard self._date.value.count > 0 else {
-            self._appProgress.accept((message: "The origin is required.", loading: false, done: nil))
+        guard self._destination.value.count > 0 else {
+            self._appProgress.accept((message: "The destination is required.", loading: false, done: nil))
             return
         }
 
+        guard self._date.value.count > 0 else {
+            self._appProgress.accept((message: "The date is required.", loading: false, done: nil))
+            return
+        }
 
         _buttonEnabled.accept(true)
         self.sendData(_origin.value, _destination.value, _date.value)
@@ -80,7 +79,7 @@ class SearchViewModel {
             }
 
             if let schedules = response {
-                self._schedules.accept(schedules.schedule)
+                self._schedules.accept(schedules.schedule.schedule)
                 self._appProgress.accept((message: "Fetch successful.", loading: false, done: true))
             }
         }
