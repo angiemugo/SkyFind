@@ -49,6 +49,10 @@ class AirportListViewController: UIViewController, UISearchResultsUpdating {
         mainTableview.register(AirportListCell.self, forCellReuseIdentifier: Constants.AIRPORT_CELL)
         mainTableview.tableFooterView = UIView()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "leftArrow"), style: .plain, target: self, action: #selector(back))
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .white
         self.configureSearchController()
         viewModel = AirportListViewModel(with: NetworkManager(),
                                          refreshControl: refreshControl.rx.controlEvent(.valueChanged).asDriver())

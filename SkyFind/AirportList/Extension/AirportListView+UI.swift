@@ -28,7 +28,11 @@ extension AirportListViewController {
     }
 
     @objc func back() {
-        guard let airport = selectedAirport else { return }
+        guard let airport = selectedAirport else {
+            self.showAlert("Airports", body: "Please select an airport")
+            return
+        }
+        
         if isDestination {
            delegate?.getAirport(airport, nil)
         } else {

@@ -119,5 +119,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                                     destination: destination.asDriver(),
                                     date: date.asDriver(),
                                     searchButton: searchButton.rx.tap.asDriver())
-    }  
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+    }
 }
