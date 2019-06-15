@@ -15,7 +15,7 @@ struct NetworkManager {
     enum NetworkResponse: String {
         case success
         case authenticationError = "Your token is invalid"
-        case notFound = "The resource was not found"
+        case notFound = "The resource you requested was not found, refine the search parameters and try again"
         case badRequest = "Bad request"
         case outdated = " The url you requested is outdated"
         case failed = "Network request failed"
@@ -31,6 +31,7 @@ struct NetworkManager {
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
         switch response.statusCode {
         case 200...299: return .success
+        case 400: return .failure(NetworkResponse.notFound.rawValue)
         case 401: return .failure(NetworkResponse.authenticationError.rawValue)
         case 404: return .failure(NetworkResponse.notFound.rawValue)
         case 501...599: return .failure(NetworkResponse.badRequest.rawValue)
