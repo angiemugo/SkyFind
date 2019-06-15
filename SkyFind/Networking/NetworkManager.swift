@@ -104,6 +104,7 @@ struct NetworkManager {
 
     func getSchedule(_ origin: String, destination: String, date: String, completion: @escaping (_ flightSchedule: ScheduleResource?, _ error: String?) -> ()) {
         guard let token = KeychainWrapper.standard.string(forKey: "token") else {
+            //implement logic to kick off fetching the token
             return
         }
 

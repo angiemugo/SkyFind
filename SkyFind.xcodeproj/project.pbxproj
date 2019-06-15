@@ -21,7 +21,7 @@
 		FD83DC2922B3787C0009007E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC2822B3787C0009007E /* LoaderView.swift */; };
 		FD83DC2B22B378A90009007E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC2A22B378A90009007E /* UIView+Extension.swift */; };
 		FD83DC2E22B392000009007E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC2D22B392000009007E /* MapViewController.swift */; };
-		FD83DC3122B392210009007E /* MapView+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC3022B392210009007E /* MapView+Delegate.swift */; };
+		FD83DC3122B392210009007E /* MapViewDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC3022B392210009007E /* MapViewDelegate+Extension.swift */; };
 		FD83DC3422B393320009007E /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC3322B393320009007E /* ScheduleCell.swift */; };
 		FD83DC3622B394860009007E /* ScheduleView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DC3522B394860009007E /* ScheduleView+Extension.swift */; };
 		FD83DC3822B3D2810009007E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD83DC3722B3D2810009007E /* Main.storyboard */; };
@@ -79,7 +79,7 @@
 		FD83DC2822B3787C0009007E /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		FD83DC2A22B378A90009007E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FD83DC2D22B392000009007E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		FD83DC3022B392210009007E /* MapView+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapView+Delegate.swift"; sourceTree = "<group>"; };
+		FD83DC3022B392210009007E /* MapViewDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewDelegate+Extension.swift"; sourceTree = "<group>"; };
 		FD83DC3322B393320009007E /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		FD83DC3522B394860009007E /* ScheduleView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleView+Extension.swift"; sourceTree = "<group>"; };
 		FD83DC3722B3D2810009007E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		FD83DC2F22B392040009007E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				FD83DC3022B392210009007E /* MapView+Delegate.swift */,
+				FD83DC3022B392210009007E /* MapViewDelegate+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -539,7 +539,7 @@
 				FD9E6A5022AEC67C00C3D355 /* SearchViewModel.swift in Sources */,
 				FD9E6A1A22AE68B200C3D355 /* AppDelegate.swift in Sources */,
 				FD9E6A3222AE691D00C3D355 /* HTTPMethod.swift in Sources */,
-				FD83DC3122B392210009007E /* MapView+Delegate.swift in Sources */,
+				FD83DC3122B392210009007E /* MapViewDelegate+Extension.swift in Sources */,
 				FD9E6A3A22AE695000C3D355 /* API.swift in Sources */,
 				FD6966A422AF9AA400D4C2B4 /* AirportListViewController.swift in Sources */,
 				FD9E6A5222AEC68D00C3D355 /* SearchViewController.swift in Sources */,

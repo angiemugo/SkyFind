@@ -108,8 +108,8 @@ struct Coordinate {
 
 extension Coordinate: Decodable {
     enum CodingKeys: String, CodingKey {
-        case Longitude = "Latitude"
-        case Latitude = "Longitude"
+        case Latitude = "Latitude"
+        case Longitude = "Longitude"
     }
 
     init(from decoder: Decoder) throws {
